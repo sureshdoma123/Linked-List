@@ -15,6 +15,18 @@ void print_fun(Node* head){
 	}
 	cout<<temp->data;
 }
+
+//Find middle of an Linked List
+
+Node* middle_pointer(Node* head){
+	Node* slow=head;
+	Node* fast=head;
+	while(slow->next and fast->next and fast->next->next){
+		slow=slow->next;
+		fast=fast->next->next;
+	}
+	return slow;
+}
 int main() {
     //creat the pointer 
 	Node *head = NULL;
@@ -36,7 +48,7 @@ int main() {
 	
 	print_fun(head);
 	
-	
+	cout<<(middile_pointer(head))->data;
 	
 	
 	return 0;

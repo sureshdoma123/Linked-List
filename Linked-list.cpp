@@ -7,15 +7,14 @@ struct Node{
     Node* next;
     
 };
-void Displaydata(Node *n)
-{
-    while(n!=NULL)
-    {
-        cout<<n->data<<" ";
-        n=n->next;
-    }
+void print_fun(Node* head){
+	Node *temp=head;
+	while(temp->next){
+		cout<<temp->data<<"->";
+		temp=temp->next;
+	}
+	cout<<temp->data;
 }
-
 int main() {
     //creat the pointer 
 	Node *head = NULL;
@@ -35,7 +34,7 @@ int main() {
 	second->data=3;
 	second->next=NULL;
 	
-	Displaydata(head);
+	print_fun(head);
 	
 	
 	

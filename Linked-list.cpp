@@ -7,6 +7,9 @@ struct Node{
     Node* next;
     
 };
+
+//Print the Linked List
+
 void print_fun(Node* head){
 	Node *temp=head;
 	while(temp->next){
